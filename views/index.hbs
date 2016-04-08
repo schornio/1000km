@@ -10,33 +10,27 @@
   </head>
   <body>
     <header>
-        <h1>20 / 1000km</h1>
+        <h1>{{entriesSum}} / 1000km</h1>
     </header>
 
     <div id="progress-bar">
-      <div class="progress" style="width: 2%">
+      <div class="progress" style="width: {{entriesPercent}}%">
 
       </div>
     </div>
 
     <table id="progress-list">
       <tbody>
+        {{#entries}}
         <tr>
           <td>
-            Friday, 8th April
+            {{date}}
           </td>
           <td>
-            10km
+            {{distance}}km
           </td>
         </tr>
-        <tr>
-          <td>
-            Monday, 4th April
-          </td>
-          <td>
-            10km
-          </td>
-        </tr>
+        {{/entries}}
       </tbody>
     </table>
 
