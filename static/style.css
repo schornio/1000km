@@ -1,4 +1,40 @@
 * {
   padding: 0;
   margin: 0;
+
+  font-family: 'Oswald', sans-serif;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+header {
+  margin: 10vh 0;
+}
+
+header > h1 {
+  text-align: center;
+}
+
+#progress-bar {
+  margin: 0 10vw;
+  border: 1px solid white;
+  height: 5vh;
+}
+
+#progress-bar > .progress {
+  height: 100%;
+  background: linear-gradient(to right, yellow, red);
+}
+
+#progress-list {
+  margin: 10vh 10vw;
+  width: calc(100% - 20vw);
+  text-align: center;
+}
+
+#progress-list td {
+  width: 50%;
 }
