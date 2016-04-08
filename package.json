@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/schornio/1000km#readme",
   "dependencies": {
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "hbs": "^4.0.0"
   }
 }
