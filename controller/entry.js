@@ -17,7 +17,7 @@ class Entry {
           sum += entry.distance;
         }
 
-        response.render('index.hbs', {
+        response.render('index', {
           entries: entries,
           entriesSum: sum,
           entriesPercent: sum / 10, // divided by 1000 multiplied by 100
