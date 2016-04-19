@@ -25,7 +25,7 @@
   "homepage": "https://github.com/schornio/1000km#readme",
   "dependencies": {
     "express": "^4.13.4",
-    "hbs": "^4.0.0",
+    "express-handlebars": "^3.0.0",
     "modern-mongo": "^2.4.0",
     "mongodb": "^2.1.16"
   }

@@ -4,12 +4,14 @@ const PORT = process.env.PORT || 8080;
 const DB = process.env.DB || 'mongodb://localhost/test';
 
 const express = require('express');
+const handlebars = require('express-handlebars');
 const mm = require('modern-mongo');
 const Entry = require('./controller/entry');
 
 let app = express();
 
-app.set('view engine', 'hbs');
+app.engine('handlebars', handlebars());
+app.set('view engine', 'handlebars');
 
 app.use('/static', express.static(`${__dirname}/static`));
 
