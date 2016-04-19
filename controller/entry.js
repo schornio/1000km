@@ -5,13 +5,11 @@ const Entries = require('../model/entries');
 class Entry {
   constructor(app, db) {
     this.entries = new Entries(db);
-    app.get('/', this.index);
+    app.get('/', this.index.bind(this));
   }
 
   index (request, response) {
-    let entries = new Entries();
-
-    entries.getEntries()
+    this.entries.getEntries()
       .then((entries) => {
         let sum = 0;
 

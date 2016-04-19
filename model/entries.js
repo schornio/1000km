@@ -1,16 +1,22 @@
 'use strict';
 
-class Entries {
-  constructor () {
+const COLLECTION = 'entries';
 
+const mm = require('modern-mongo');
+
+class Entry extends mm.Document {
+  constructor (db) {
+    super(db, COLLECTION);
+  }
+}
+
+class Entries extends mm.Collection {
+  constructor (db) {
+    super (db, Entry, COLLECTION);
   }
 
   getEntries () {
-    return Promise.resolve([
-      { distance: 32, date: new Date(2016, 3, 3) },
-      { distance: 10, date: new Date(2016, 3, 4) },
-      { distance: 10, date: new Date(2016, 3, 8) }
-    ]);
+    return this.findMany();
   }
 }
 
